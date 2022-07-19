@@ -38,6 +38,8 @@
 function handleCredentialResponse(response) {
 
 const body = { id_token: response.credential }
+
+
 fetch('https://restserver-curso-nodejs1.herokuapp.com/api/auth/google', {
     method: 'POST',
     headers: {
