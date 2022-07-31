@@ -4,7 +4,7 @@ const bcryptjs = require('bcryptjs');
 
 const Usuario = require('../models/usuario');
 
-
+// obtener usuarios
 const usuariosGet = async(req = request, res = response) => {
 
     const { limite = 5, desde = 0 } = req.query;
@@ -29,6 +29,7 @@ const usuariosGet = async(req = request, res = response) => {
     });
 }
 
+// Crea un usuario
 const usuariosPost = async(req, res = response) => {
 
     const { nombre, correo, password, rol } = req.body;
